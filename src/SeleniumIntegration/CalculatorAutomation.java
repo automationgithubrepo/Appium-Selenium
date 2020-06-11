@@ -34,7 +34,7 @@ public class CalculatorAutomation
 	System.out.println("!!!Application Launched!!!");
 	Thread.sleep(3000);
 	}
-	//@Test
+	@Test
 	public static void AddFunction() throws InterruptedException
 	{
       ad.findElementById("com.google.android.calculator:id/digit_7").click();
