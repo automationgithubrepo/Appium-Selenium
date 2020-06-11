@@ -22,37 +22,42 @@ public class CalculatorAutomation
 	@BeforeTest
 	public static void LunchApp() throws InterruptedException, MalformedURLException
 	{
-		
 	// Start Appium server before test execution//	
 		
 	DesiredCapabilities dc = new DesiredCapabilities();
 	dc.setCapability("deviceName", "A");
 	dc.setCapability("platformVersion", "9");
 	dc.setCapability("platformName", "Android");
-	File f= new File("E:\\MobileWP\\Appium\\apk\\google-maps-10-41-4.apk");
+	File f= new File("E:\\MobileWP\\Appium\\apk\\Calculator.apk");
 	dc.setCapability("app", f.getAbsolutePath());
 	ad = new AndroidDriver<WebElement>(new URL("http://192.168.43.59:4723/wd/hub"), dc);
 	System.out.println("!!!Application Launched!!!");
 	Thread.sleep(3000);
 	}
-	@Test
-	public static void AddFunction()
+	//@Test
+	public static void AddFunction() throws InterruptedException
 	{
-    	  MobileElement el1 = (MobileElement) ad.findElementById("com.google.android.calculator:id/digit_7");
-    	  el1.click();
-    	  MobileElement el2 = (MobileElement) ad.findElementByAccessibilityId("plus");
-    	  el2.click();
-    	  MobileElement el3 = (MobileElement) ad.findElementById("com.google.android.calculator:id/digit_8");
-    	  el3.click();
-    	  MobileElement el4 = (MobileElement) ad.findElementByAccessibilityId("equals");
-    	  el4.click();
-    	  MobileElement el5 = (MobileElement) ad.findElementByAccessibilityId("clear");
-    	  el5.click();
+      ad.findElementById("com.google.android.calculator:id/digit_7").click();
+      ad.findElementByAccessibilityId("plus").click();
+      ad.findElementById("com.google.android.calculator:id/digit_8").click();
+      ad.findElementByAccessibilityId("equals").click();
+	}
+	@Test(priority=1)
+	public static void SubtractFunction() throws InterruptedException
+	{
+	ad.findElementById("com.google.android.calculator:id/digit_1").click();
+    ad.findElementById("com.google.android.calculator:id/digit_2").click();
+    ad.findElementByAccessibilityId("minus").click();
+    ad.findElementById("com.google.android.calculator:id/digit_8").click();
+    ad.findElementByAccessibilityId("equals").click();
+    Thread.sleep(2000);
+    ad.findElementByAccessibilityId("clear").click();
+
 	}
 	@AfterTest
 	public static void QuitDriver()
 	{
-      //ad.quit();
+      ad.quit();
       System.out.println("!!!Test Executed Successfully!!!");
 	}
 }

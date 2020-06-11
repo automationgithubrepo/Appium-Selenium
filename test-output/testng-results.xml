@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16808" started-at="2020-06-11T05:39:02Z" finished-at="2020-06-11T05:39:19Z">
+  <suite name="Default suite" duration-ms="20166" started-at="2020-06-11T10:52:36Z" finished-at="2020-06-11T10:52:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16808" started-at="2020-06-11T05:39:02Z" finished-at="2020-06-11T05:39:19Z">
-      <class name="SeleniumIntegration.LaunchApplication">
-        <test-method status="PASS" signature="LunchApp()[pri:0, instance:SeleniumIntegration.LaunchApplication@77f03bb1]" name="LunchApp" is-config="true" duration-ms="12978" started-at="2020-06-11T11:09:02Z" finished-at="2020-06-11T11:09:15Z">
+    <test name="Default test" duration-ms="20166" started-at="2020-06-11T10:52:36Z" finished-at="2020-06-11T10:52:56Z">
+      <class name="SeleniumIntegration.CalculatorAutomation">
+        <test-method status="PASS" signature="LunchApp()[pri:0, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="LunchApp" is-config="true" duration-ms="12934" started-at="2020-06-11T16:22:36Z" finished-at="2020-06-11T16:22:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LunchApp -->
-        <test-method status="PASS" signature="FindElements()[pri:0, instance:SeleniumIntegration.LaunchApplication@77f03bb1]" name="FindElements" duration-ms="3805" started-at="2020-06-11T11:09:15Z" finished-at="2020-06-11T11:09:19Z">
+        <test-method status="PASS" signature="SubtractFunction()[pri:1, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="SubtractFunction" duration-ms="6783" started-at="2020-06-11T16:22:49Z" finished-at="2020-06-11T16:22:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FindElements -->
-        <test-method status="PASS" signature="QuitDriver()[pri:0, instance:SeleniumIntegration.LaunchApplication@77f03bb1]" name="QuitDriver" is-config="true" duration-ms="1" started-at="2020-06-11T11:09:19Z" finished-at="2020-06-11T11:09:19Z">
+        </test-method> <!-- SubtractFunction -->
+        <test-method status="PASS" signature="QuitDriver()[pri:0, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="QuitDriver" is-config="true" duration-ms="421" started-at="2020-06-11T16:22:56Z" finished-at="2020-06-11T16:22:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QuitDriver -->
-      </class> <!-- SeleniumIntegration.LaunchApplication -->
+      </class> <!-- SeleniumIntegration.CalculatorAutomation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
