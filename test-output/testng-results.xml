@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20166" started-at="2020-06-11T10:52:36Z" finished-at="2020-06-11T10:52:56Z">
+  <suite name="Default suite" duration-ms="26588" started-at="2020-06-19T05:49:51Z" finished-at="2020-06-19T05:50:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20166" started-at="2020-06-11T10:52:36Z" finished-at="2020-06-11T10:52:56Z">
+    <test name="Default test" duration-ms="26588" started-at="2020-06-19T05:49:51Z" finished-at="2020-06-19T05:50:18Z">
       <class name="SeleniumIntegration.CalculatorAutomation">
-        <test-method status="PASS" signature="LunchApp()[pri:0, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="LunchApp" is-config="true" duration-ms="12934" started-at="2020-06-11T16:22:36Z" finished-at="2020-06-11T16:22:49Z">
+        <test-method status="PASS" signature="LunchApp()[pri:0, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="LunchApp" is-config="true" duration-ms="15014" started-at="2020-06-19T11:19:51Z" finished-at="2020-06-19T11:20:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LunchApp -->
-        <test-method status="PASS" signature="SubtractFunction()[pri:1, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="SubtractFunction" duration-ms="6783" started-at="2020-06-11T16:22:49Z" finished-at="2020-06-11T16:22:56Z">
+        <test-method status="PASS" signature="AddFunction()[pri:0, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="AddFunction" duration-ms="3454" started-at="2020-06-19T11:20:06Z" finished-at="2020-06-19T11:20:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddFunction -->
+        <test-method status="PASS" signature="SubtractFunction()[pri:1, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="SubtractFunction" duration-ms="7725" started-at="2020-06-19T11:20:10Z" finished-at="2020-06-19T11:20:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubtractFunction -->
-        <test-method status="PASS" signature="QuitDriver()[pri:0, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="QuitDriver" is-config="true" duration-ms="421" started-at="2020-06-11T16:22:56Z" finished-at="2020-06-11T16:22:56Z">
+        <test-method status="PASS" signature="QuitDriver()[pri:0, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="QuitDriver" is-config="true" duration-ms="379" started-at="2020-06-19T11:20:18Z" finished-at="2020-06-19T11:20:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QuitDriver -->
