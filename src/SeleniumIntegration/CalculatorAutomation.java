@@ -20,24 +20,9 @@ public class CalculatorAutomation
 {
 	public static AndroidDriver ad ;
 	@BeforeTest
-	public static void LunchApp() throws InterruptedException, MalformedURLException
+	public static void LaunchApk() throws InterruptedException, MalformedURLException
 	{
-	// Start Appium server before test execution//	
-		
-	DesiredCapabilities dc = new DesiredCapabilities();
-	dc.setCapability("deviceName", "A");
-	dc.setCapability("platformVersion", "9");
-	dc.setCapability("platformName", "Android");
-//	dc.setCapability("appWaitActivity", "com.android.packageinstaller.permission.ui.GrantPermissionsActivity");
-//	dc.setCapability("appWaitPackage", "com.google.android.packageinstaller");
-//	dc.setCapability("adbExecTimeout", "20000");
-//	dc.setCapability("appWaitDuration", "20000");
-	File f= new File("E:\\MobileWP\\Appium\\apk\\Calculator.apk");
-	dc.setCapability("app", f.getAbsolutePath());
-	ad = new AndroidDriver<WebElement>(new URL("http://192.168.43.59:4723/wd/hub"), dc);
-	System.out.println("!!!Application Launched!!!");
-	Thread.sleep(3000);
-	//ad.findElementById("com.android.packageinstaller:id/do_not_ask_checkbox").click();
+     DesiredCapabilitiesForAndroid.LunchApp();
 	}
 	@Test
 	public static void AddFunction() throws InterruptedException
