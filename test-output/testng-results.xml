@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31039" started-at="2020-06-25T05:26:07Z" finished-at="2020-06-25T05:26:38Z">
+  <suite name="Default suite" duration-ms="25241" started-at="2020-06-25T11:41:51Z" finished-at="2020-06-25T11:42:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31039" started-at="2020-06-25T05:26:07Z" finished-at="2020-06-25T05:26:38Z">
-      <class name="SeleniumIntegration.CalculatorAutomation">
-        <test-method status="PASS" signature="LaunchApk()[pri:0, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="LaunchApk" is-config="true" duration-ms="11929" started-at="2020-06-25T10:56:07Z" finished-at="2020-06-25T10:56:19Z">
+    <test name="Default test" duration-ms="25241" started-at="2020-06-25T11:41:51Z" finished-at="2020-06-25T11:42:17Z">
+      <class name="SeleniumIntegration.WhatsAppAutomation">
+        <test-method status="PASS" signature="LaunchApk()[pri:0, instance:SeleniumIntegration.WhatsAppAutomation@77f03bb1]" name="LaunchApk" is-config="true" duration-ms="17653" started-at="2020-06-25T17:11:51Z" finished-at="2020-06-25T17:12:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchApk -->
-        <test-method status="PASS" signature="AddFunction()[pri:0, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="AddFunction" duration-ms="2848" started-at="2020-06-25T10:56:19Z" finished-at="2020-06-25T10:56:22Z">
+        <test-method status="PASS" signature="TextMessage()[pri:0, instance:SeleniumIntegration.WhatsAppAutomation@77f03bb1]" name="TextMessage" duration-ms="7142" started-at="2020-06-25T17:12:09Z" finished-at="2020-06-25T17:12:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddFunction -->
-        <test-method status="PASS" signature="SubtractFunction()[pri:1, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="SubtractFunction" duration-ms="8444" started-at="2020-06-25T10:56:22Z" finished-at="2020-06-25T10:56:31Z">
+        </test-method> <!-- TextMessage -->
+        <test-method status="PASS" signature="MakeACall()[pri:1, instance:SeleniumIntegration.WhatsAppAutomation@77f03bb1]" name="MakeACall" duration-ms="1" started-at="2020-06-25T17:12:16Z" finished-at="2020-06-25T17:12:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SubtractFunction -->
-        <test-method status="PASS" signature="Multi()[pri:2, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="Multi" duration-ms="3731" started-at="2020-06-25T10:56:31Z" finished-at="2020-06-25T10:56:34Z">
+        </test-method> <!-- MakeACall -->
+        <test-method status="PASS" signature="AddStatus()[pri:2, instance:SeleniumIntegration.WhatsAppAutomation@77f03bb1]" name="AddStatus" duration-ms="0" started-at="2020-06-25T17:12:16Z" finished-at="2020-06-25T17:12:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Multi -->
-        <test-method status="PASS" signature="Divide()[pri:3, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="Divide" duration-ms="3656" started-at="2020-06-25T10:56:34Z" finished-at="2020-06-25T10:56:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Divide -->
-        <test-method status="PASS" signature="QuitDriver()[pri:0, instance:SeleniumIntegration.CalculatorAutomation@77f03bb1]" name="QuitDriver" is-config="true" duration-ms="401" started-at="2020-06-25T10:56:38Z" finished-at="2020-06-25T10:56:38Z">
+        </test-method> <!-- AddStatus -->
+        <test-method status="PASS" signature="QuitDriver()[pri:0, instance:SeleniumIntegration.WhatsAppAutomation@77f03bb1]" name="QuitDriver" is-config="true" duration-ms="443" started-at="2020-06-25T17:12:16Z" finished-at="2020-06-25T17:12:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QuitDriver -->
-      </class> <!-- SeleniumIntegration.CalculatorAutomation -->
+      </class> <!-- SeleniumIntegration.WhatsAppAutomation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
