@@ -74,7 +74,6 @@ public class CalculatorAutomation
 	      ad.findElementByAccessibilityId("divide").click();
 	      ad.findElementById("com.google.android.calculator:id/digit_8").click();
 	      ad.findElementByAccessibilityId("equals").click();
-
 		 System.out.println("Successfully divided 2 numbers");
 	}
 	@AfterTest
