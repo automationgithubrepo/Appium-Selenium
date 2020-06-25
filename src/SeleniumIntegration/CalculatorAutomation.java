@@ -22,15 +22,29 @@ public class CalculatorAutomation
 	@BeforeTest
 	public static void LaunchApk() throws InterruptedException, MalformedURLException
 	{
-     DesiredCapabilitiesForAndroid.LunchApp();
+		DesiredCapabilities dc = new DesiredCapabilities();
+		dc.setCapability("deviceName", "A");
+		dc.setCapability("platformVersion", "9");
+		dc.setCapability("platformName", "Android");
+//		dc.setCapability("appWaitActivity", "com.android.packageinstaller.permission.ui.GrantPermissionsActivity");
+//		dc.setCapability("appWaitPackage", "com.google.android.packageinstaller");
+//		dc.setCapability("adbExecTimeout", "20000");
+//		dc.setCapability("appWaitDuration", "20000");
+		File f= new File("E:\\MobileWP\\Appium\\apk\\Calculator.apk");
+		dc.setCapability("app", f.getAbsolutePath());
+		ad = new AndroidDriver<WebElement>(new URL("http://192.168.43.59:4723/wd/hub"), dc);
+		System.out.println("!!!Application Launched!!!");
+		Thread.sleep(2000);
 	}
 	@Test
 	public static void AddFunction() throws InterruptedException
 	{
+		
       ad.findElementById("com.google.android.calculator:id/digit_7").click();
       ad.findElementByAccessibilityId("plus").click();
       ad.findElementById("com.google.android.calculator:id/digit_8").click();
       ad.findElementByAccessibilityId("equals").click();
+      System.out.println("Successfully added 2 numbers");
 	}
 	@Test(priority=1)
 	public static void SubtractFunction() throws InterruptedException
@@ -42,7 +56,26 @@ public class CalculatorAutomation
     ad.findElementByAccessibilityId("equals").click();
     Thread.sleep(2000);
     ad.findElementByAccessibilityId("clear").click();
+    System.out.println("Successfully subtracted 2 numbers");
+	}
+	@Test(priority=2)
+	public static void Multi() throws InterruptedException
+	{
+	      ad.findElementById("com.google.android.calculator:id/digit_7").click();
+	      ad.findElementByAccessibilityId("multiply").click();
+	      ad.findElementById("com.google.android.calculator:id/digit_8").click();
+	      ad.findElementByAccessibilityId("equals").click();
+		 System.out.println("Successfully multiplied 2 numbers");
+	}
+	@Test(priority=3)
+	public static void Divide() throws InterruptedException
+	{
+	      ad.findElementById("com.google.android.calculator:id/digit_7").click();
+	      ad.findElementByAccessibilityId("divide").click();
+	      ad.findElementById("com.google.android.calculator:id/digit_8").click();
+	      ad.findElementByAccessibilityId("equals").click();
 
+		 System.out.println("Successfully divided 2 numbers");
 	}
 	@AfterTest
 	public static void QuitDriver()
