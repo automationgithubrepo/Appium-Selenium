@@ -15,7 +15,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class WhatsAppAutomation 
 {
-	public static AndroidDriver ad ;
+	public static AndroidDriver ad;
 	@BeforeTest
 	public static void LaunchApk() throws InterruptedException, MalformedURLException
 	{
