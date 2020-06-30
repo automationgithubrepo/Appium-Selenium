@@ -1,22 +1,19 @@
 package SeleniumIntegration;
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
-
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
-
+import Utilities.Screenshots;
 public class MISNagalandAutomation 
 {
 	public static AndroidDriver ad ;
@@ -45,27 +42,61 @@ public class MISNagalandAutomation
 		ad.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
 		Thread.sleep(3000);
 		ad.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
+		Thread.sleep(3000);
 	}
 	@Test(priority=1)
-	public static void SubtractFunction() throws InterruptedException
+	public static void Login() throws InterruptedException
 	{
-
+      ad.findElement(By.id("com.android.fao.faoapplication:id/username")).sendKeys("Diganshu");
+      ad.findElement(By.id("com.android.fao.faoapplication:id/password")).sendKeys("12345");
+      ad.findElement(By.id("com.android.fao.faoapplication:id/sign_in_button")).click();
+      Thread.sleep(3000);
 	}
 	@Test(priority=2)
-	public static void Multi() throws InterruptedException
+	public static void Profile() throws InterruptedException, IOException
 	{
+	 ad.findElement(By.id("com.android.fao.faoapplication:id/btnProfile")).click();
+	 Thread.sleep(3000);
+	 ad.findElement(By.id("com.android.fao.faoapplication:id/btnuserDetails")).click();
+	 Thread.sleep(2000);
+	 Screenshots.TakeScreenshots(ad, "C:\\Users\\Dell\\Desktop\\New folder\\UserDetails.png");
+	 Thread.sleep(2000);
+	 ad.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
+	 Thread.sleep(2000);
+	 ad.findElement(By.id("com.android.fao.faoapplication:id/btnmanageRole")).click();
+	 Thread.sleep(2000);
+	 ad.findElement(By.id("com.android.fao.faoapplication:id/spinner_services")).click();
+	 Thread.sleep(2000);
+	 ad.findElement(By.id("android:id/text1")).click();
+	 Thread.sleep(2000);
+	 ad.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
+	 Thread.sleep(3000);
+	 ad.findElement(By.id("com.android.fao.faoapplication:id/btn_logout")).click();
+	 Thread.sleep(2000);
+	 ad.findElement(By.id("android:id/button1")).click();
+	}
+	//@Test(priority=3)
+	public static void Download() throws InterruptedException
+	{
+		ad.findElement(By.id("com.android.fao.faoapplication:id/btnDownload")).click();
+	}
+	//@Test(priority=4)
+	public static void Update() throws InterruptedException
+	{
+		ad.findElement(By.id("com.android.fao.faoapplication:id/btnUpdate")).click();
+		
 
 	}
-	@Test(priority=3)
-	public static void Divide() throws InterruptedException
+	//@Test(priority=5)
+	public static void Sync() throws InterruptedException
 	{
-
+		ad.findElement(By.id("com.android.fao.faoapplication:id/btnSync")).click();
 
 	}
 	@AfterTest
 	public static void QuitDriver()
 	{
-      ad.quit();
+     // ad.quit();
       System.out.println("!!!Test Executed Successfully!!!");
 	}
 }
