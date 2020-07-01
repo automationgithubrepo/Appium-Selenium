@@ -108,8 +108,6 @@ public class MISNagalandAutomation
 	 ad.findElement(By.id("android:id/button1")).click();
 	 
 	}
-
-
 	@Test(priority=5)
 	public static void Sync() throws InterruptedException
 	{
