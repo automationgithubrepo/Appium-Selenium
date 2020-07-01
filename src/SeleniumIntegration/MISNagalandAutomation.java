@@ -42,6 +42,7 @@ public class MISNagalandAutomation
 		Thread.sleep(3000);
 		ad.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
 		Thread.sleep(3000);
+		System.out.println("!!!All Permission Granted!!!");
 	}
 	@Test(priority=1)
 	public static void Login() throws InterruptedException
@@ -50,8 +51,38 @@ public class MISNagalandAutomation
       ad.findElement(By.id("com.android.fao.faoapplication:id/password")).sendKeys("12345");
       ad.findElement(By.id("com.android.fao.faoapplication:id/sign_in_button")).click();
       Thread.sleep(3000);
+      System.out.println("!!!Login Successfull!!!");
 	}
 	@Test(priority=2)
+	public static void Download() throws InterruptedException, IOException
+	{
+		ad.findElement(By.id("com.android.fao.faoapplication:id/btnDownload")).click();
+		Thread.sleep(1000);
+		 Screenshots.TakeScreenshots(ad, "C:\\Users\\Dell\\Desktop\\New folder\\Download.png");
+		 System.out.println("!!!Latest Data Downloaded!!!");
+	}
+	@Test(priority=3)
+	public static void Update() throws InterruptedException
+	{
+		ad.findElement(By.id("com.android.fao.faoapplication:id/btnUpdate")).click();
+		Thread.sleep(1000);
+		ad.findElement(By.id("com.android.fao.faoapplication:id/spinner1")).click();
+		Thread.sleep(4000);
+		 ad.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]")).click();
+		 Thread.sleep(4000);
+		 ad.findElement(By.id("com.android.fao.faoapplication:id/spinner4")).click();
+			Thread.sleep(3000);
+		 ad.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[3]")).click();
+		 Thread.sleep(3000);
+		 ad.findElement(By.id("com.android.fao.faoapplication:id/spinner5")).click();
+			Thread.sleep(3000);
+		 ad.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[3]")).click();
+		 Thread.sleep(3000);
+		 ad.findElement(By.id("com.android.fao.faoapplication:id/btnSubmit")).click();
+		 System.out.println("!!!Data Updated Successfully!!!");
+		 
+	}
+	@Test(priority=4)
 	public static void Profile() throws InterruptedException, IOException
 	{
 	 ad.findElement(By.id("com.android.fao.faoapplication:id/btnProfile")).click();
@@ -60,6 +91,7 @@ public class MISNagalandAutomation
 	 Thread.sleep(2000);
 	 Screenshots.TakeScreenshots(ad, "C:\\Users\\Dell\\Desktop\\New folder\\UserDetails.png");
 	 Thread.sleep(2000);
+	 System.out.println("!!!Snapshot taken for userdetails **C:\\Users\\Dell\\Desktop\\New folder**!!!");
 	 ad.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
 	 Thread.sleep(2000);
 	 ad.findElement(By.id("com.android.fao.faoapplication:id/btnmanageRole")).click();
@@ -68,25 +100,17 @@ public class MISNagalandAutomation
 	 Thread.sleep(2000);
 	 ad.findElement(By.id("android:id/text1")).click();
 	 Thread.sleep(2000);
+	 System.out.println("!!!---Role Selected---!!!");
 	 ad.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
 	 Thread.sleep(3000);
 	 ad.findElement(By.id("com.android.fao.faoapplication:id/btn_logout")).click();
 	 Thread.sleep(2000);
 	 ad.findElement(By.id("android:id/button1")).click();
+	 
 	}
-	//@Test(priority=3)
-	public static void Download() throws InterruptedException
-	{
-		ad.findElement(By.id("com.android.fao.faoapplication:id/btnDownload")).click();
-	}
-	//@Test(priority=4)
-	public static void Update() throws InterruptedException
-	{
-		ad.findElement(By.id("com.android.fao.faoapplication:id/btnUpdate")).click();
-		
 
-	}
-	//@Test(priority=5)
+
+	@Test(priority=5)
 	public static void Sync() throws InterruptedException
 	{
 		ad.findElement(By.id("com.android.fao.faoapplication:id/btnSync")).click();
