@@ -7,6 +7,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
@@ -57,7 +58,7 @@ public class MISNagalandAutomation
 	public static void Download() throws InterruptedException, IOException
 	{
 		ad.findElement(By.id("com.android.fao.faoapplication:id/btnDownload")).click();
-		Thread.sleep(1000);
+		Thread.sleep(20000);
 		 Screenshots.TakeScreenshots(ad, "C:\\Users\\Dell\\Desktop\\New folder\\Download.png");
 		 System.out.println("!!!Latest Data Downloaded!!!");
 	}
@@ -68,19 +69,44 @@ public class MISNagalandAutomation
 		Thread.sleep(1000);
 		ad.findElement(By.id("com.android.fao.faoapplication:id/spinner1")).click();
 		Thread.sleep(4000);
-		 ad.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]")).click();
+		 ad.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[4]")).click();
 		 Thread.sleep(4000);
 		 ad.findElement(By.id("com.android.fao.faoapplication:id/spinner4")).click();
 			Thread.sleep(3000);
-		 ad.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[3]")).click();
+		 ad.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]")).click();
 		 Thread.sleep(3000);
 		 ad.findElement(By.id("com.android.fao.faoapplication:id/spinner5")).click();
 			Thread.sleep(3000);
-		 ad.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[3]")).click();
+		 ad.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[2]")).click();
 		 Thread.sleep(3000);
 		 ad.findElement(By.id("com.android.fao.faoapplication:id/btnSubmit")).click();
+			Thread.sleep(3000);
+		 ad.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/"
+		 		+ "android.view.ViewGroup/android.widget.FrameLayout[2]"
+		 		+ "/android.widget.LinearLayout/"
+		 		+ "android.widget.ListView/android.widget.TextView")).click();	
+			Thread.sleep(3000);
+		 ad.findElement(By.id("com.android.fao.faoapplication:id/Edittextfirstmonth")).clear();
+			Thread.sleep(3000);
+		 ad.findElement(By.id("com.android.fao.faoapplication:id/Edittextfirstmonth")).sendKeys("111");
+			Thread.sleep(3000);
+		 ad.findElement(By.id("com.android.fao.faoapplication:id/Edittextsecondmonth")).clear();
+			Thread.sleep(3000);
+		 ad.findElement(By.id("com.android.fao.faoapplication:id/Edittextsecondmonth")).sendKeys("111");
+			Thread.sleep(3000);
+		 ad.findElement(By.id("com.android.fao.faoapplication:id/Edittextthirdmonth")).clear();
+			 Thread.sleep(3000);
+		 ad.findElement(By.id("com.android.fao.faoapplication:id/Edittextthirdmonth")).sendKeys("111");
+			 Thread.sleep(3000);
+		 ad.findElement(By.id("com.android.fao.faoapplication:id/btnFinalSubmitlayout")).click();
+			    Thread.sleep(2000);
+		 ad.findElement(By.id("android:id/button1")).click();
+		Thread.sleep(3000);
 		 System.out.println("!!!Data Updated Successfully!!!");
-		 
+		 ad.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
+		 Thread.sleep(3000);
+		 ad.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
+		 Thread.sleep(2000);
 	}
 	@Test(priority=4)
 	public static void Profile() throws InterruptedException, IOException
@@ -106,9 +132,9 @@ public class MISNagalandAutomation
 	 ad.findElement(By.id("com.android.fao.faoapplication:id/btn_logout")).click();
 	 Thread.sleep(2000);
 	 ad.findElement(By.id("android:id/button1")).click();
-	 
+	 System.out.println("!!!---Logged out successfully---!!!");
 	}
-	@Test(priority=5)
+	//@Test(priority=5)
 	public static void Sync() throws InterruptedException
 	{
 		ad.findElement(By.id("com.android.fao.faoapplication:id/btnSync")).click();
