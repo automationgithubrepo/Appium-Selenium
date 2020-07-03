@@ -138,7 +138,6 @@ public class MISNagalandAutomation
 	public static void Sync() throws InterruptedException
 	{
 		ad.findElement(By.id("com.android.fao.faoapplication:id/btnSync")).click();
-
 	}
 	@AfterTest
 	public static void QuitDriver()
