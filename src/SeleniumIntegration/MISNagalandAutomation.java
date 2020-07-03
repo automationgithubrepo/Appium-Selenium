@@ -7,7 +7,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
@@ -28,7 +27,7 @@ public class MISNagalandAutomation
 		dc.setCapability("appWaitPackage", "com.google.android.packageinstaller");
 		dc.setCapability("adbExecTimeout", "20000");
 		dc.setCapability("appWaitDuration", "20000");
-		File f= new File("C:\\Users\\Dell\\git\\Appium-Selenium\\apk\\MISNagaland.apk");
+		File f= new File("C:\\Users\\Dell\\git\\Appium-Selenium\\apk\\MISMizoram.apk");
 		dc.setCapability("app", f.getAbsolutePath());
 		ad = new AndroidDriver<WebElement>(new URL("http://192.168.43.59:4723/wd/hub"), dc);
 		System.out.println("!!!Application Launched!!!");
@@ -46,13 +45,14 @@ public class MISNagalandAutomation
 		System.out.println("!!!All Permission Granted!!!");
 	}
 	@Test(priority=1)
-	public static void Login() throws InterruptedException
+	public static void Login() throws InterruptedException, IOException
 	{
       ad.findElement(By.id("com.android.fao.faoapplication:id/username")).sendKeys("Diganshu");
       ad.findElement(By.id("com.android.fao.faoapplication:id/password")).sendKeys("12345");
       ad.findElement(By.id("com.android.fao.faoapplication:id/sign_in_button")).click();
       Thread.sleep(3000);
       System.out.println("!!!Login Successfull!!!");
+      Screenshots.TakeScreenshots(ad, "C:\\Users\\Dell\\Desktop\\New folder\\Login Screen.png");
 	}
 	@Test(priority=2)
 	public static void Download() throws InterruptedException, IOException
@@ -63,7 +63,7 @@ public class MISNagalandAutomation
 		 System.out.println("!!!Latest Data Downloaded!!!");
 	}
 	@Test(priority=3)
-	public static void Update() throws InterruptedException
+	public static void Update() throws InterruptedException, IOException
 	{
 		ad.findElement(By.id("com.android.fao.faoapplication:id/btnUpdate")).click();
 		Thread.sleep(1000);
@@ -98,6 +98,7 @@ public class MISNagalandAutomation
 			 Thread.sleep(3000);
 		 ad.findElement(By.id("com.android.fao.faoapplication:id/Edittextthirdmonth")).sendKeys("111");
 			 Thread.sleep(3000);
+			 Screenshots.TakeScreenshots(ad, "C:\\Users\\Dell\\Desktop\\New folder\\Updated Data.png");
 		 ad.findElement(By.id("com.android.fao.faoapplication:id/btnFinalSubmitlayout")).click();
 			    Thread.sleep(2000);
 		 ad.findElement(By.id("android:id/button1")).click();
@@ -117,7 +118,6 @@ public class MISNagalandAutomation
 	 Thread.sleep(2000);
 	 Screenshots.TakeScreenshots(ad, "C:\\Users\\Dell\\Desktop\\New folder\\UserDetails.png");
 	 Thread.sleep(2000);
-	 System.out.println("!!!Snapshot taken for userdetails **C:\\Users\\Dell\\Desktop\\New folder**!!!");
 	 ad.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
 	 Thread.sleep(2000);
 	 ad.findElement(By.id("com.android.fao.faoapplication:id/btnmanageRole")).click();
@@ -138,6 +138,7 @@ public class MISNagalandAutomation
 	public static void Sync() throws InterruptedException
 	{
 		ad.findElement(By.id("com.android.fao.faoapplication:id/btnSync")).click();
+		 System.out.println("!!!---Sync..Successfully---!!!");
 	}
 	@AfterTest
 	public static void QuitDriver()

@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="145563" started-at="2020-07-03T05:29:05Z" finished-at="2020-07-03T05:31:30Z">
+  <suite name="Default suite" duration-ms="140122" started-at="2020-07-03T08:59:22Z" finished-at="2020-07-03T09:01:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="145563" started-at="2020-07-03T05:29:05Z" finished-at="2020-07-03T05:31:30Z">
+    <test name="Default test" duration-ms="140122" started-at="2020-07-03T08:59:22Z" finished-at="2020-07-03T09:01:42Z">
       <class name="SeleniumIntegration.MISNagalandAutomation">
-        <test-method status="PASS" signature="LaunchApk()[pri:0, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="LaunchApk" is-config="true" duration-ms="13944" started-at="2020-07-03T10:59:05Z" finished-at="2020-07-03T10:59:19Z">
+        <test-method status="PASS" signature="LaunchApk()[pri:0, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="LaunchApk" is-config="true" duration-ms="12750" started-at="2020-07-03T14:29:22Z" finished-at="2020-07-03T14:29:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchApk -->
-        <test-method status="PASS" signature="AllowPermissions()[pri:0, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="AllowPermissions" duration-ms="9072" started-at="2020-07-03T10:59:19Z" finished-at="2020-07-03T10:59:28Z">
+        <test-method status="PASS" signature="AllowPermissions()[pri:0, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="AllowPermissions" duration-ms="9603" started-at="2020-07-03T14:29:34Z" finished-at="2020-07-03T14:29:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AllowPermissions -->
-        <test-method status="PASS" signature="Login()[pri:1, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="Login" duration-ms="6513" started-at="2020-07-03T10:59:28Z" finished-at="2020-07-03T10:59:34Z">
+        <test-method status="PASS" signature="Login()[pri:1, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="Login" duration-ms="6421" started-at="2020-07-03T14:29:44Z" finished-at="2020-07-03T14:29:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="Download()[pri:2, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="Download" duration-ms="21764" started-at="2020-07-03T10:59:34Z" finished-at="2020-07-03T10:59:56Z">
+        <test-method status="PASS" signature="Download()[pri:2, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="Download" duration-ms="21819" started-at="2020-07-03T14:29:51Z" finished-at="2020-07-03T14:30:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Download -->
-        <test-method status="PASS" signature="Update()[pri:3, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="Update" duration-ms="68458" started-at="2020-07-03T10:59:56Z" finished-at="2020-07-03T11:01:04Z">
+        <test-method status="PASS" signature="Update()[pri:3, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="Update" duration-ms="64158" started-at="2020-07-03T14:30:12Z" finished-at="2020-07-03T14:31:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Update -->
-        <test-method status="PASS" signature="Profile()[pri:4, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="Profile" duration-ms="25749" started-at="2020-07-03T11:01:04Z" finished-at="2020-07-03T11:01:30Z">
+        <test-method status="PASS" signature="Profile()[pri:4, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="Profile" duration-ms="25342" started-at="2020-07-03T14:31:16Z" finished-at="2020-07-03T14:31:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Profile -->
-        <test-method status="PASS" signature="QuitDriver()[pri:0, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="QuitDriver" is-config="true" duration-ms="0" started-at="2020-07-03T11:01:30Z" finished-at="2020-07-03T11:01:30Z">
+        <test-method status="PASS" signature="QuitDriver()[pri:0, instance:SeleniumIntegration.MISNagalandAutomation@4ec6a292]" name="QuitDriver" is-config="true" duration-ms="1" started-at="2020-07-03T14:31:42Z" finished-at="2020-07-03T14:31:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QuitDriver -->
