@@ -1,4 +1,4 @@
-package SeleniumIntegration;
+package Modules;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -13,11 +13,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import Utilities.Screenshots;
-public class MISNagalandAutomation 
+public class MISAutomation 
 {
 	public static AndroidDriver ad ;
-	@BeforeTest
-	public static void LaunchApk() throws InterruptedException, MalformedURLException
+	
+	public static void LaunchApk(String apkpath) throws InterruptedException, MalformedURLException
 	{
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability("deviceName", "A");
@@ -27,13 +27,12 @@ public class MISNagalandAutomation
 		dc.setCapability("appWaitPackage", "com.google.android.packageinstaller");
 		dc.setCapability("adbExecTimeout", "20000");
 		dc.setCapability("appWaitDuration", "20000");
-		File f= new File("C:\\Users\\Dell\\git\\Appium-Selenium\\apk\\MISMizoram.apk");
+		File f= new File(apkpath);
 		dc.setCapability("app", f.getAbsolutePath());
 		ad = new AndroidDriver<WebElement>(new URL("http://192.168.43.59:4723/wd/hub"), dc);
 		System.out.println("!!!Application Launched!!!");
 		Thread.sleep(2000);
 	}
-	@Test
 	public static void AllowPermissions() throws InterruptedException
 	{
 		ad.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
@@ -44,7 +43,6 @@ public class MISNagalandAutomation
 		Thread.sleep(3000);
 		System.out.println("!!!All Permission Granted!!!");
 	}
-	@Test(priority=1)
 	public static void Login() throws InterruptedException, IOException
 	{
       ad.findElement(By.id("com.android.fao.faoapplication:id/username")).sendKeys("Diganshu");
@@ -54,7 +52,6 @@ public class MISNagalandAutomation
       System.out.println("!!!Login Successfull!!!");
       Screenshots.TakeScreenshots(ad, "C:\\Users\\Dell\\Desktop\\New folder\\Login Screen.png");
 	}
-	@Test(priority=2)
 	public static void Download() throws InterruptedException, IOException
 	{
 		ad.findElement(By.id("com.android.fao.faoapplication:id/btnDownload")).click();
@@ -62,7 +59,6 @@ public class MISNagalandAutomation
 		 Screenshots.TakeScreenshots(ad, "C:\\Users\\Dell\\Desktop\\New folder\\Download.png");
 		 System.out.println("!!!Latest Data Downloaded!!!");
 	}
-	@Test(priority=3)
 	public static void Update() throws InterruptedException, IOException
 	{
 		ad.findElement(By.id("com.android.fao.faoapplication:id/btnUpdate")).click();
@@ -109,7 +105,6 @@ public class MISNagalandAutomation
 		 ad.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
 		 Thread.sleep(2000);
 	}
-	@Test(priority=4)
 	public static void Profile() throws InterruptedException, IOException
 	{
 	 ad.findElement(By.id("com.android.fao.faoapplication:id/btnProfile")).click();
@@ -134,17 +129,13 @@ public class MISNagalandAutomation
 	 ad.findElement(By.id("android:id/button1")).click();
 	 System.out.println("!!!---Logged out successfully---!!!");
 	}
-	//@Test(priority=5)
 	public static void Sync() throws InterruptedException
 	{
 		ad.findElement(By.id("com.android.fao.faoapplication:id/btnSync")).click();
 		 System.out.println("!!!---Sync..Successfully---!!!");
 	}
-	@AfterTest
 	public static void QuitDriver()
 	{
-		
-     // ad.quit();
-      System.out.println("!!!Test Executed Successfully!!!");
+     ad.quit();
 	}
 }
